@@ -1,0 +1,77 @@
+### Travel Planner API Test Requests
+### Use with VS Code REST Client extension
+
+@baseUrl = http://localhost:8000
+
+### Health Check
+GET {{baseUrl}}/health
+
+### API Health Check
+GET {{baseUrl}}/api/health
+
+### Start Travel Planning - Basic Request
+POST {{baseUrl}}/travel-planner
+Content-Type: application/json
+
+{
+    "userName": "Nick Greenfield",
+    "preferences": "Looking for a family-friendly luxury vacation with activities for children, beach access, and cultural experiences",
+    "durationInDays": 7,
+    "budget": "Luxury, around $10000 total",
+    "travelDates": "July 1-11, 2025",
+    "specialRequirements": "Need connecting rooms or a family suite. One child has a peanut allergy."
+}
+
+### Start Travel Planning - Adventure Trip
+POST {{baseUrl}}/travel-planner
+Content-Type: application/json
+
+{
+    "userName": "Jane Doe",
+    "preferences": "Adventure travel with hiking, wildlife, and outdoor activities. Interested in national parks.",
+    "durationInDays": 10,
+    "budget": "Mid-range, around $5000",
+    "travelDates": "August 15-25, 2025",
+    "specialRequirements": "Vegetarian meals preferred"
+}
+
+### Start Travel Planning - Romantic Getaway
+POST {{baseUrl}}/travel-planner
+Content-Type: application/json
+
+{
+    "userName": "John Smith",
+    "preferences": "Romantic trip for anniversary. Fine dining, spa, beautiful scenery, wine tasting.",
+    "durationInDays": 5,
+    "budget": "Luxury, $8000",
+    "travelDates": "September 1-5, 2025",
+    "specialRequirements": "Ocean view room preferred"
+}
+
+### ============================================
+### Status and Approval Requests
+### Replace {instanceId} with actual ID from start response
+### ============================================
+
+@instanceId = REPLACE_WITH_INSTANCE_ID
+
+### Get Travel Planning Status
+GET {{baseUrl}}/travel-planner/status/{{instanceId}}
+
+### Approve Travel Plan
+POST {{baseUrl}}/travel-planner/approve/51865b80f43048eb8405f65db57a9e7b
+Content-Type: application/json
+
+{
+    "approved": true,
+    "comments": "Looks great, please proceed with booking!"
+}
+
+### Reject Travel Plan
+POST {{baseUrl}}/travel-planner/reject/{{instanceId}}
+Content-Type: application/json
+
+{
+    "approved": false,
+    "comments": "I'd like to consider other options."
+}

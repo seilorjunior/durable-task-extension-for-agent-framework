@@ -1,13 +1,16 @@
-# Durable Agents for Azure Functions - Samples
+# Durable Agents - Quickstarts & Samples
 
-This repository contains samples demonstrating how to build **durable AI agents** using Azure Functions with the [Microsoft Agent Framework](https://github.com/microsoft/agent-framework).
+This repository contains **quickstarts** and **samples** demonstrating how to build **durable AI agents** using the [Durable Task extension for Microsoft Agent Framework](https://github.com/microsoft/agent-framework).
 
-All samples are complete with **Azure Developer CLI (azd)** and **Bicep** infrastructure for one-command deployment to Azure.
+- **Quickstarts** — Focused, minimal examples that demonstrate a single concept
+- **Samples** — Complete applications with frontend and backend
+
+All projects include **Azure Developer CLI (azd)** and **Bicep** infrastructure for one-command deployment to Azure.
 
 ## 🚀 Quick Start
 
 ```bash
-# Navigate to any sample
+# Navigate to any quickstart or sample
 cd quickstarts/python/azure-functions/01_single_agent
 
 # Deploy to Azure
@@ -15,10 +18,12 @@ azd auth login
 azd up
 ```
 
-## 📁 Samples
+## 📁 Quickstarts
 
-| Sample | Description |
-|--------|-------------|
+Minimal examples focused on specific patterns and capabilities.
+
+| Quickstart | Description |
+|------------|-------------|
 | [01_single_agent](quickstarts/python/azure-functions/01_single_agent) | Basic single agent with Azure OpenAI |
 | [02_multi_agent](quickstarts/python/azure-functions/02_multi_agent) | Multiple agents working together |
 | [03_reliable_streaming](quickstarts/python/azure-functions/03_reliable_streaming) | Redis-backed streaming with disconnect/resume support |
@@ -27,6 +32,15 @@ azd up
 | [06_multi_agent_orchestration_conditionals](quickstarts/python/azure-functions/06_multi_agent_orchestration_conditionals) | Conditional routing between agents |
 | [07_single_agent_orchestration_hitl](quickstarts/python/azure-functions/07_single_agent_orchestration_hitl) | Human-in-the-loop approval workflows |
 | [08_mcp_server](quickstarts/python/azure-functions/08_mcp_server) | Model Context Protocol (MCP) server integration |
+
+## 🎯 Samples
+
+Complete applications showcasing end-to-end scenarios with UI and backend.
+
+| Sample | Hosting | Description |
+|--------|---------|-------------|
+| [Agentic Travel Planner](samples/python/azure-functions/agentic-travel-planner) | Azure Functions | Multi-agent travel planning app with React frontend, human-in-the-loop approval, and blob storage |
+| [Agentic Travel Planner](samples/python/azure-container-apps/agentic-travel-planner) | Azure Container Apps | Same travel planner deployed to Container Apps for containerized workloads |
 
 ## 🏗️ Architecture
 
@@ -82,6 +96,7 @@ All samples use **Managed Identity** for authentication:
 ## 📚 Learn More
 
 - [Microsoft Agent Framework Documentation](https://github.com/microsoft/agent-framework)
+- [Durable Agents](https://learn.microsoft.com/en-us/agent-framework/user-guide/agents/agent-types/durable-agent/create-durable-agent?pivots=programming-language-python)
 - [Azure Functions Documentation](https://learn.microsoft.com/azure/azure-functions/)
 - [Durable Task Scheduler](https://learn.microsoft.com/azure/azure-functions/durable/durable-functions-task-scheduler)
 - [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/)

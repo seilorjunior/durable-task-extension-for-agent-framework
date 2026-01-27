@@ -1,0 +1,26 @@
+/* App.css - Main application styles */
+.App {
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Additional utility classes */
+.hidden {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
