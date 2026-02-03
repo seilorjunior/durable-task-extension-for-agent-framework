@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <!-- Required for packages that don't support net6.0 -->
+    <_FunctionsExtensionTargetFramework>net8.0</_FunctionsExtensionTargetFramework>
+  </PropertyGroup>
+</Project>

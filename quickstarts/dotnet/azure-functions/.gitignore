@@ -1,0 +1,31 @@
+# Build outputs
+bin/
+obj/
+
+# Azure Functions
+local.settings.json
+
+# Azure Developer CLI
+.azure/
+main.parameters.json
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# IDE
+.vs/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
